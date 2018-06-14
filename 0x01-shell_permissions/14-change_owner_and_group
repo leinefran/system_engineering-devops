@@ -1,2 +1,2 @@
 #!/bin/bash
-chown belly:holberton *
+chown -R belly:holberton
