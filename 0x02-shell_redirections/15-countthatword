@@ -1,2 +1,2 @@
 #!/bin/bash
-grep bin 15-countthatword | wc -l
+grep bin /etc/passwd | wc -l
