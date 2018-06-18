@@ -1,2 +1,2 @@
 #!/bin/bash
-alias user="id -n" | echo "hello" $user
+echo "hello" $(id -n)
