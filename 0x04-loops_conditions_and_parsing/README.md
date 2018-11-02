@@ -27,7 +27,6 @@
 ---
 File|Task
 ---|---
-
 0-RSA_public_key.pub | Public SSH Key
 1-for_holberton_school | a Bash script that displays Holberton School 10 times with for loop
 2-while_holberton_school | a Bash script that displays Holberton School 10 times with while loop
