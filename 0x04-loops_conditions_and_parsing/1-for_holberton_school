@@ -1,6 +1,6 @@
-#!/bin/bash/env bash
+#!/usr/bin/env bash
 # This script dispplays "Holberton School" 10 times.
-for i in {1..10}
+for ((n=0 ; n<10; n++))
 do
 	echo "Holberton School"
 done
