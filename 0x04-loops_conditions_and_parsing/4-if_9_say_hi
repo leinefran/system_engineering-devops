@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# a Bash script that displays Holberton School 10 times using a while loop.
+n=0;
+while ((n++ < 10));
+do
+if ((n == 9))
+   then
+	echo "Hi"
+   else
+	echo "Holberton School"
+fi
+done
