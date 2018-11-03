@@ -7,14 +7,14 @@
 hour=0;
 minutes=0;
 
-while [ $hour -le 1 ];
+while [ $hour -le 12 ];
 do
-    echo "Hour:$hour";
+    echo "Hour: $hour";
 
     while ((minutes++ < 59));
     do
 	echo "$minutes";
     done
     minutes=0;
-        hour=$(( $hour + 1 ))
+        hour=$((hour + 1))
 done
