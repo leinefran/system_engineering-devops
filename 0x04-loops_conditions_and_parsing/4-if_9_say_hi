@@ -3,12 +3,12 @@
 # but for the 9th iteration, displays Holberton School and then Hi on \n
 
 n=0;
-while ((n++ < 10));
+while [ $n -le 9 ];
 do
-if ((n == 9))
-   then
+    if ((n == 9))
+    then
 	echo "Hi"
-   else
-	echo "Holberton School"
-fi
+    fi
+    echo "Holberton School"
+    n=$((n+1))
 done
