@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 # a Bash script that pings an IP address passed as an argument; should ping the IP 5 times.
-ping -c 5 xargs
+if [ "$1" ]
+then
+    ping -c 5 "$1"
+else
+    Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
+fi
