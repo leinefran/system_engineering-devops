@@ -24,5 +24,7 @@ File|Task
 1-distributed_web_infrastructure | a three servers web infrastructure that host the website www.foobar.com.
 2-secured_and_monitored_web_infrastructure | a three servers web infrastructure that host the website www.foobar.com, it must be secured, serve encrypted traffic and be monitored.
 3-scale_up | add extra server and one extra load-balancer.
+
+
 ## Author
 Leine Valente
