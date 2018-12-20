@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# a bash script that configures the Nginx server to redirect to another page.
+
+new_string="https://giphy.com/explore/this-is-bullshit"
+sed -i "/35.237.160.254/$new_string/" /etc/nginx/sites-available/default
