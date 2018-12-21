@@ -4,5 +4,5 @@
 apt-get update
 apt-get -y install nginx
 file=/etc/nginx/sites-available/default
-sed -i "s|^server|server {\n\tlocation / redirect_me {\n\t\treturn 301 https://giphy.com/explore/this-is-bullshit;\n"} | $file
+sed -i "s|^server|server {\n\tlocation / redirect_me {\n\t\treturn 301 https://giphy.com/explore/this-is-bullshit;\n}"|$file
 service nginx restart
