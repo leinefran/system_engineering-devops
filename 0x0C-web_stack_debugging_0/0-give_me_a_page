@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# a bash script that configures a new ubuntu machine:
+
+apt-get update
+apt-get -y install apache2
