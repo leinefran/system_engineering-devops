@@ -3,7 +3,7 @@
 
 sudo apt-get update
 sudo apt-get -y install nginx
-"echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html"
+echo "Holberton School" > /usr/share/nginx/html/index.html"
 sudo service nginx start
-sed -i "31i \n\tlocation /redirect_me{\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n" /etc/nginx/sites-available/default
+sed -i "0,|server_name localhost;|s|server_name localhost; \n\t location /redirect_me{\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n" /etc/nginx/sites-available/default
 sudo service nginx restart
