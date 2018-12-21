@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # a bash script that configures a new ubuntu machine:
 
-sudo service apache restart
+sudo service apache2 restart
