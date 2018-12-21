@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # a bash script that configures the Nginx server to redirect to another page.
 
-
-sed -i "location 31i" return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4
+sudo apt-get update
+sudo apt-get -y install nginx
+"echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html"
+sudo service nginx start
+sed -i "31i \n\tlocation /redirect_me{\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n" /etc/nginx/sites-available/default
+sudo service nginx restart
