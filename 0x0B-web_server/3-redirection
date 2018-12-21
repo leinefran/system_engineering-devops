@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # a bash script that configures the Nginx server to redirect to another page.
 
-new_string="https://giphy.com/explore/this-is-bullshit"
-sed -i "s/server_name localhost;/$new_string/" /etc/nginx/sites-available/default
+sed -i "20i" return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4
