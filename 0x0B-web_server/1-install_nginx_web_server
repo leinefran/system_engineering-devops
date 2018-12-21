@@ -3,6 +3,5 @@
 
 sudo apt-get update
 sudo apt-get -y install nginx
-ssh ubuntu@35.237.160.254 -p 80
-echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+echo "Holberton School" > /usr/share/nginx/html/index.html
 sudo service nginx restart
