@@ -5,5 +5,7 @@ sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" > /usr/share/nginx/html/index.html"
 sudo service nginx start
-sed -i "0,|server_name localhost;|s|server_name localhost; \n\t location /redirect_me{\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n" /etc/nginx/sites-available/default
+file=/etc/nginx/sites-available/default
+new_string="\s\n\t location /redirect_me {\n\t return 301 https://giphy.com/explore/this-is-bullshit}\n"
+sed -i "s/^server$/$new_string/" $file
 sudo service nginx restart
