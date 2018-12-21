@@ -4,6 +4,6 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" > /usr/share/nginx/html/index.html"
-echo -e "Ceci n'est pas une page\n" > /etc/nginx/sites-available/default/404.html
+echo -e "Ceci n'est pas une page\n" > /usr/share/nginx/html/404.html
 sed -i 's|#error_page 404 /404.html;|error_page 404 /404.html;|' /etc/nginx/sites-available/default
 sudo service nginx restart
