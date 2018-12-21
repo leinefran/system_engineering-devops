@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # a bash script to configure a custom 404 error page on Nginx:
 
+sudo apt-get update
+sudo apt-get -y install nginx
+"echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html"
 echo "Ceci n'est pas une page" >> /etc/nginx/sites-available/default/404.html
 sudo nginx -t && nginx -s reload
