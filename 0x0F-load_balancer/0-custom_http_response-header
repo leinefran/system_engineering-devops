@@ -1,0 +1,8 @@
+#!/usr/bin/env/bash
+# a bash script that configures web-02 to be identical to web-01:
+
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Holberton School" > /usr/share/nginx/html/index.html
+sudo service nginx restart
+
