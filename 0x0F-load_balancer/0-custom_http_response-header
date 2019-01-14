@@ -10,4 +10,8 @@ echo "Holberton School" > /usr/share/nginx/html/index.html
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 file="/etc/nginx/sites-available/default"
 sed -i '/^\tserver/a\\n\tadd_header X-Served-By \"\$HOSTNAME\";\n' $file
+echo "Holberton School for the win!" | sudo tee /usr/share/nginx/html/index.html
+sed -i '/^\tserver_name localhost;/ a\\n\tlocation \/redirect_me \{\n\t\treturn 301 https://www.youtube.com/watch?v=ZxD3o-9H1lY;\n\t\}\n' $file
+echo -e "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+sed -i 's|#error_page 404 /404.html;|error_page 404 /404.html;|' $file
 sudo service nginx restart
