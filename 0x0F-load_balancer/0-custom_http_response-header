@@ -1,4 +1,4 @@
-#!/usr/bin/env/bash
+#!/usr/bin/env bash
 # a bash script that configures web-02 to be identical to web-01:
 # install nginx;
 # configure it to listen to port 80;
