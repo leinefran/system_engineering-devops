@@ -1,4 +1,4 @@
-# 0x0E. Web stack debugging #1
+# 0x12. Web stack debugging #2
 
 ### This project in the System engineering & DevOps series is about:
 
