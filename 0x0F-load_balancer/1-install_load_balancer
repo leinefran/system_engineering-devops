@@ -1,12 +1,21 @@
 #!/usr/bin/env bash
 # a script that install a load balancer
 
-sudo apt-get install haproxy
-file="/etc/default/haproxy"
-sudo sed 's/ENABLED=0/ENABLE=1/' file
-file_2="/etc/haproxy/haproxy.cfg"
-echo "backend nodes
-	balance roundrobin
-	server 373-web-01 35.190.162.122:80 check
-    	server 373-web-02 35.237.116.99:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+add-apt-repository ppa:vbernat/haproxy-1.6
+apt-get -y update
+if sudo apt-get -y install haproxy; then
+    sed -i 's/^ENABLED=0/ENABLED=1/' /etc/default/haproxy
+    cp /etc/haproxy/haproxy.cfg{,.original}
+    ADD='
+frontend http_front
+bind *:80
+default_backend http_back
 
+backend http_back
+balance roundrobin
+server 373-web-01 35.190.162.122:80 check
+server 373-web-02 35.237.116.99:80 check
+'
+    echo -en "$ADD" >> /etc/haproxy/haproxy.cfg
+    /etc/init.d/haproxy restart
+fi
