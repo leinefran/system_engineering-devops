@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # set Nginx to run as nginx
-sudo sed 's/#user/user/'
-sudo sed 's/www-data/nginx/'
-sudo -u nginx service nginx start
+file="/etc/nginx/nginx.conf"
+sudo sed 's/#user/user/' $file
+sudo sed 's/www-data/nginx/' $file
+sed -i 's/80/8080/g' /etc/nginx/sites-available/default
+chmod u+rw /etc/nginx/nginx.conf
+chown nginx:nginx /etc/nginx/nginx.conf
+sudo -u nginx service nginx restart
