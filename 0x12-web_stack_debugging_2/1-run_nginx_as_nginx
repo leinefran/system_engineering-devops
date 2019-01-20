@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # set Nginx to run as nginx
+pkill apache2
 file="/etc/nginx/nginx.conf"
 sudo sed 's/#user/user/' $file
 sudo sed 's/www-data/nginx/' $file
