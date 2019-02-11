@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''A Python script that, using REST API, for a given employee ID, returns information about their TODO list progress'''
+'''A Python script that, using REST API, for a given employee ID,
+returns information about their TODO list progress'''
 
 import requests
 import sys
@@ -19,15 +20,14 @@ if __name__ == "__main__":
     for task in todo_list:
         if int(user_id) == task.get('userId'):
             count_tasks = count_tasks + 1
-            if task.get('completed') == True:
+            if task.get('completed') is True:
                 done_tasks = done_tasks + 1
 
-    print("Employee {} is done with tasks({}/{}):".format(user_name,
-                                                    done_tasks, count_tasks))
-
+    print("Employee {} is done with tasks({}/{}):".
+          format(user_name, done_tasks, count_tasks))
 
     for task in todo_list:
         if int(user_id) == task.get('userId'):
-            if task.get('completed') == True:
+            if task.get('completed') is True:
                 task_title = task.get('title')
                 print("\t {}".format(task_title))
