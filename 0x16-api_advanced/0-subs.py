@@ -13,10 +13,8 @@ def number_of_subscribers(subreddit):
                                      headers={'User-Agent': 'Frankie'})
 
         subr_info = req_subreddit.json()
-        print(subr_info)
 
-        subscribers = key.get('data').get('subscribers')
-        print(subscribers)
+        subscribers = subr_info.get('data').get('subscribers')
         return subscribers
 
     except:
