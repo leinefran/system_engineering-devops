@@ -9,13 +9,16 @@ def recurse(subreddit, hot_list=[], after=None):
 
     try:
         if (after):
-            req = requests.get('https://api.reddit.com/r/{}/hot'
-                               .format(subreddit), allow_redirects=False,
-                               headers={'User-Agent': 'Frankie'})
+            req = requests.get('https://api.reddit.com/r/{}/hot?after={}'
+                            .format(subreddit, id_after), allow_redirects=False,
+                            headers={'User-Agent': 'Frankie'})
         else:
-            (requests.get('https://api.reddit.com/r/{}/hot?after={}'
-                           .format(subreddit, id_after), allow_redirects=False,
-                           headers={'User-Agent': 'Frankie'})):
+            (requests.get('https://api.reddit.com/r/{}/hot'
+                           .format(subreddit), allow_redirects=False,
+                           headers={'User-Agent': 'Frankie'}))
+
+    except:
+        return(None)
 
         subRe_info = req.json()
 
@@ -29,6 +32,3 @@ def recurse(subreddit, hot_list=[], after=None):
             return(recurse(subreddit, hot_list, after))
         else:
             return(hot_list)
-
-    except:
-        return(None)
