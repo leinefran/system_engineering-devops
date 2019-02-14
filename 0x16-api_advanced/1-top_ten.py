@@ -20,4 +20,4 @@ def top_ten(subreddit):
             print(titles)
 
     except:
-        return 0
+        print('None')
