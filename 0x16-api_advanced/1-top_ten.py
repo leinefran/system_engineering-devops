@@ -8,14 +8,16 @@ import sys
 def top_ten(subreddit):
 
     try:
-        req_subreddit = requests.get('https://api.reddit.com/r/{}/hot?sort=hot&
-        limit=10'.format(subreddit), allow_redirects=False,
-                                     headers={'User-Agent': 'Frankie'})
+        req = requests.get('https://api.reddit.com/r/{}/hot?sort=hot&limit=10'
+                           .format(subreddit), allow_redirects=False,
+                           headers={'User-Agent': 'Frankie'})
 
-        subRe_info = req_subreddit.json()
+        subRe_info = req.json()
 
-        ten_hot_posts = subRe_info.get('data').get('children')
-        return ten_hot_posts
+        top_ten = subRe_info.get('data').get('children')
+        for k in top_ten:
+            titles = k.get('data').get('title')
+            print(titles)
 
     except:
         return 0
