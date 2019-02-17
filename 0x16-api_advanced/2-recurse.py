@@ -8,27 +8,27 @@ import sys
 def recurse(subreddit, hot_list=[], after=None):
 
     try:
-        if (after):
-            req = requests.get('https://api.reddit.com/r/{}/hot?after={}'
-                            .format(subreddit, id_after), allow_redirects=False,
-                            headers={'User-Agent': 'Frankie'})
-        else:
-            (requests.get('https://api.reddit.com/r/{}/hot'
-                           .format(subreddit), allow_redirects=False,
-                           headers={'User-Agent': 'Frankie'}))
+        req = requests.get('https://api.reddit.com/r/{}/hot?after={}'
+                           .format(subreddit, after),
+                           allow_redirects=False,
+                           headers={'User-Agent': 'Frankie'})
 
-    except:
-        return(None)
+        print("The value of subRe_info is {}".format(req))
+        print("")
 
         subRe_info = req.json()
+        print("The value of subRe_info is {}". format(subRe_info))
+        print("")
 
         top_ten = subRe_info.get('data').get('children')
         for k in top_ten:
             hot_list.append(k.get('data').get('title'))
 
-        id_after = subRe_info.get('data').get('after')
+        after = subRe_info.get('data').get('after')
+    except:
+        return(None)
 
-        if (after):
-            return(recurse(subreddit, hot_list, after))
-        else:
-            return(hot_list)
+    if (after is None):
+        return(hot_list)
+    else:
+        return(recurse(subreddit, hot_list, after))
