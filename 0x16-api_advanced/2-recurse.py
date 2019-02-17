@@ -13,12 +13,7 @@ def recurse(subreddit, hot_list=[], after=None):
                            allow_redirects=False,
                            headers={'User-Agent': 'Frankie'})
 
-        print("The value of subRe_info is {}".format(req))
-        print("")
-
         subRe_info = req.json()
-        print("The value of subRe_info is {}". format(subRe_info))
-        print("")
 
         top_ten = subRe_info.get('data').get('children')
         for k in top_ten:
