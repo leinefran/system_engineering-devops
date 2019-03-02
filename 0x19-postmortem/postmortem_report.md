@@ -19,7 +19,7 @@ On Friday March 2nd, 2019 mid morning the server access went down resulting in 5
 
 
 #### Root Cause and Resolution
-As you can see in the example below, the issue was caused by the server connection to a file with the wrong extension.
+As you can see in the example below, the issue was caused by the server connecting to a file with the wrong extension.
 
 ```
 stat("/var/www/html/wp-includes/default-filters.php", {st_mode=S_IFREG|0644, st_size=25220, ...}) = 0
@@ -30,7 +30,7 @@ lstat("/var/www/html/wp-includes/class-wp-locale.phpp", 0x7ffda99eec20) = -1 ENO
 open("/var/www/html/wp-includes/class-wp-locale.phpp", O_RDONLY) = -1 ENOENT (No such file or directory)
 ```
 
-Once the problem was corrected, the server was reinitiated without further problems.
+Once the problem was corrected, the server was reinitiated without further issues.
 
 #### Corrective and Preventive Measures
 
