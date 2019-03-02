@@ -6,17 +6,17 @@
 
 #### Summary
 
-On Friday March 2nd, 2019 mid morning the server access went down resulting in 500 error. Such error occur when there's something wrong on the website's server.
+On the morning of Friday March 2nd, 2019 the server access went down resulting in 500 error. Such error occur when there's something wrong on the website's server.
 
 #### Timeline
 
 - **10:15 PST** - 500 error when trying to access the website
-- **10:20** - Reloaded the webpage, same error response.
+- **10:20 PST** - Reloaded the webpage, same error response.
 - **10:25 PST** - Using "ps -auxf", checked what processes were active. Apache Server was running two processes.
 - **10:30 PST** - Used strace and curl in both servers as a way to diagnose the problem.
 - **10:32 PST** - Noticed that one of the servers were performing system calls in files with the wrong extension: "phpp" instead of "php".
 - **10:35 PST** - Corrected the problem by changing the file extension to the correct one using puppet and "sed" linux command.
-
+- **10:45 PST** - The webpage was succesfully reloaded.
 
 #### Root Cause and Resolution
 As you can see in the example below, the issue was caused by the server connecting to a file with the wrong extension.
