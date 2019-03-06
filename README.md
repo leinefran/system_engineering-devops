@@ -3,15 +3,6 @@
 # Low-level programming - C
 Low-level programming & Algorithm
 
-## Contents
-* [Purpose](https://github.com/sumin3/holbertonschool-low_level_programming#Purpose)
-* [Coding style](https://github.com/sumin3/holbertonschool-low_level_programming#Coding-style)
-* [Usage](https://github.com/sumin3/holbertonschool-low_level_programming#usage)
-* [Installation](https://github.com/sumin3/holbertonschool-low_level_programming#installation)
-* [Usage Example](https://github.com/sumin3/holbertonschool-low_level_programming#Usage-Example)
-* [Author](https://github.com/sumin3/holbertonschool-low_level_programming#author)
-
-
 ## Purpose
 This repository contains projects for training C programming. All projects are in C and are designed to learn C from beginning level to advanced level. All projects can seperate into three parts
 1. Hatching out (directory from 0x00 to 0x09, from 0x0A to 0xF, 0x10, and 0x13)
@@ -24,7 +15,7 @@ This repository contains projects for training C programming. All projects are i
 ## Installation
 To use, first download  this repository into your local machine by issuing the following command in your local terminal.
 ```
-git clone https://github.com/sumin3/holbertonschool-low_level_programming.git
+git clone https://github.com/leinefran/holberton-system_engineering-devops.git
 ```
 #### Directory
 Each directoy's name includes information below
