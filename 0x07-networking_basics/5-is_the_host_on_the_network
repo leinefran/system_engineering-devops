@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # a Bash script that pings an IP address passed as an argument; should ping the IP 5 times.
-if [ "$1" ]
+if [ $# -ne 1 ]
 then
-    ping -c 5 "$1"
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
-    Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
+    ping "$1" -c 5
 fi
