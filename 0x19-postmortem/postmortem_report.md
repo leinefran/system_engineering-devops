@@ -1,5 +1,7 @@
 # Postmortem Report
 
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/s2wRCDC6/Screen-Shot-2019-03-06-at-12-33-42-PM.png' border='0' alt='Screen-Shot-2019-03-06-at-12-33-42-PM'/></a>
+
 ## 500 server error
 
 ### Incident report for [500 error / Site Outage](https://github.com/leinefran/holberton-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
