@@ -13,7 +13,7 @@ This repository contains projects for training C programming. All projects are i
 ## Installation
 To use, first download  this repository into your local machine by issuing the following command in your local terminal.
 ```
-git clone https://github.com/leinefran/holberton-system_engineering-devops.git
+git clone https://github.com/leinefran/system_engineering-devops.git
 ```
 #### Directory
 Each directoy's name includes information below
