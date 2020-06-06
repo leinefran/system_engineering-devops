@@ -1,5 +1,3 @@
-<img src="https://www.holbertonschool.com/holberton-logo-twitter-card.png">
-
 # Low-level programming - C
 Low-level programming & Algorithm
 
